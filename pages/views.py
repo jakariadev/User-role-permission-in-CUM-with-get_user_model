@@ -1,6 +1,7 @@
+from django.views.generic import TemplateView
 from django.shortcuts import render
 from django.http import HttpResponse
 
+class HomePageView(TemplateView):
 
-def home_page_view(request):
-    return HttpResponse('Hello, World!')
+    template_name = 'home.html'
