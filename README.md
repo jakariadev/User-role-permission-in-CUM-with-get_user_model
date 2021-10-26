@@ -28,6 +28,40 @@ Docker is a platform for building, running, shipping applications in a consisten
 ## How To Use
 Make sure Docker, Python and pip are available on the system. Then simply execute the Docker Commands.
 
+- Migrations:
+
+```
+    docker-compose exec web python manage.py makemigrations
+    docker-compose exec web python manage.py migrate
+    docker-compose exec web python manage.py createsuperuser
+
+```
+- Create super user:
+
+```
+    docker-compose exec web python manage.py createsuperuser
+
+```
+
+- Build and Run(give 'sudo' if require):
+
+```
+    docker-compose up -d --build
+
+```
+- Find working ok or not (give 'sudo' if require):
+
+```
+    docker-compose logs
+
+```
+
+- Stop working with (give 'sudo' if require):
+
+```
+    docker-compose down
+
+```
 
 ## Author Info
 
