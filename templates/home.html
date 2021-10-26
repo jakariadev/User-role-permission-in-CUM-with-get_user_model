@@ -3,4 +3,19 @@
 {% block title %}Home{% endblock title %}
 {% block content %}
 <h1>Homepage for User Role and Permissions in a CUM Django</h1>
+
+{% if user.is_authenticated %}
+Hi {{ user.email }}!
+<br>
+<a href="{% url 'logout' %}">Log Out</a>
+
+{% else %}
+
+<p>You are not logged in</p>
+<a href="{% url 'login' %}">Log In</a>
+
+
+{% endif %}
+
+
 {% endblock content %}

@@ -33,7 +33,6 @@ Make sure Docker, Python and pip are available on the system. Then simply execut
 ```
     docker-compose exec web python manage.py makemigrations
     docker-compose exec web python manage.py migrate
-    docker-compose exec web python manage.py createsuperuser
 
 ```
 - Create super user:
