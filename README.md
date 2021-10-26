@@ -19,6 +19,7 @@ Docker is a platform for building, running, shipping applications in a consisten
 ## Technologies
 
 - [Docker](https://www.docker.com/)
+- [PostgreSQL](https://www.postgresql.org/)
 - [Django-Rest-Framework](https://www.django-rest-framework.org/)
 - [Django](https://www.djangoproject.com/)
 
