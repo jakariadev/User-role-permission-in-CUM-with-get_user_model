@@ -49,7 +49,7 @@ Make sure Docker, Python and pip are available on the system. Then simply execut
     docker-compose up -d --build
 
 ```
-- Find working ok or not (give 'sudo' if require):
+- Find working or not (give 'sudo' if require):
 
 ```
     docker-compose logs
@@ -60,6 +60,13 @@ Make sure Docker, Python and pip are available on the system. Then simply execut
 
 ```
     docker-compose down
+
+```
+
+- Unit Testing (give 'sudo' if require):
+
+```
+    docker-compose exec web python manage.py test
 
 ```
 
