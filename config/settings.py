@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     # Third-party
     'crispy_forms',  # new
+    'django_extensions', #user for shell_plus
 
 
     # Local
@@ -90,9 +91,10 @@ DATABASES = {
         'USER': 'postgres',
         'PASSWORD': 'postgres',
         'HOST': 'db',
-        'PORT': 5432
+        'PORT': 5432,
     }
 }
+
 
 
 # Password validation

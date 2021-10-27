@@ -7,6 +7,8 @@ name = "pypi"
 django = "~=3.2"
 psycopg2-binary = "==2.9.1"
 django-crispy-forms = "==1.13.0"
+django-extensions = "*"
+graphviz = "*"
 
 [dev-packages]
 
