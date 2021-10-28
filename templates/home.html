@@ -1,23 +1,31 @@
 <!-- templates/home.html -->
 {% extends '_base.html' %}
 {% load static %}
+{% load auth_extras %}
 {% block title %}Home{% endblock title %}
 
 {% block content %}
-<h1>User Role and Permissions in a Custom User Model-Django</h1>
-<img class="bookcover" src="{% static 'images/im1.png' %}">
-{% if user.is_authenticated %}
-Hi {{ user.email }}!
-<br>
-<a href="{% url 'logout' %}">Log Out</a>
+    <h1>User Role and Permissions in a Custom User Model-Django</h1>
+    <img class="bookcover" src="{% static 'images/im1.png' %}">
+    {% if user.is_authenticated %}
+    <h3>
+    Hi {{ user.email }} </h3> <hr>
+    {% if request.user|has_group:"administrative" %} 
+    <p>You are in the Group - administrative</p> 
+
+    {% else %}
+    <p>You aren't in any Group</p>
+    {% endif %}
+    
+    <hr>
+    <br>
+    <a href="{% url 'logout' %}">Log Out</a>
 
 {% else %}
-
-<p>You are not logged in</p>
-<a href="{% url 'login' %}">Log In</a><br>
-<p>Not yet member?</p>
-<a href="{% url 'signup' %}">Sign Up</a>
-
+    <p>You are not logged in</p>
+    <a href="{% url 'login' %}">Log In</a><br>
+    <p>Not yet member?</p>
+    <a href="{% url 'signup' %}">Sign Up</a>
 {% endif %}
 
 {% endblock content %}
