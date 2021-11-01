@@ -10,8 +10,15 @@
     {% if user.is_authenticated %}
     <h3>
     Hi {{ user.email }} </h3> <hr>
-    {% if request.user|has_group:"administrative" %} 
-    <p>You are in the Group - administrative</p> 
+    {% if request.user|has_group:"admingrp" and request.user|has_group:"editorgrp" and request.user|has_group:"viewergrp" %} 
+    <p>You are in the Group - Admin</p> 
+
+    {% elif request.user|has_group:"editorgrp" %} 
+    <p>You are in the Group - Editor</p> 
+
+    {% elif request.user|has_group:"viewergrp" %} 
+    <p>You are in the Group - Viewer</p> 
+
 
     {% else %}
     <p>You aren't in any Group</p>
