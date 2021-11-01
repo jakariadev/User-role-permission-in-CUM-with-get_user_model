@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'accounts',  # new
 
     'pages',
+    'django_seed',
 ]
 
 

@@ -31,42 +31,44 @@ Make sure Docker, Python and pip are available on the system. Then simply execut
 - Migrations:
 
 ```
-    docker-compose exec web python manage.py makemigrations
-    docker-compose exec web python manage.py migrate
-
+docker-compose exec web python manage.py makemigrations
+docker-compose exec web python manage.py migrate
 ```
 - Create super user:
 
 ```
-    docker-compose exec web python manage.py createsuperuser
-
+docker-compose exec web python manage.py createsuperuser
 ```
 
 - Build and Run(give 'sudo' if require):
 
 ```
-    docker-compose up -d --build
-
+docker-compose up -d --build
 ```
 - Find working or not (give 'sudo' if require):
 
 ```
-    docker-compose logs
-
+docker-compose logs
 ```
 
 - Stop working with (give 'sudo' if require):
 
 ```
-    docker-compose down
+docker-compose down
+```
+
+- Django Seed package to insert data in pages App's Model:
 
 ```
+docker-compose exec web python manage.py seed pages --number=15
+```
+
+--------------------------------
 
 - Unit Testing (give 'sudo' if require):
 
 ```
-    docker-compose exec web python manage.py test
-
+docker-compose exec web python manage.py test
 ```
 
 ## Author Info
